@@ -1,0 +1,146 @@
+.inventory-calendar {
+  min-height: 700px;
+}
+
+.inventory-calendar .rbc-calendar {
+  color: #111827;
+}
+
+.inventory-calendar .rbc-toolbar {
+  margin-bottom: 16px;
+}
+
+.inventory-calendar .calendar-toolbar {
+  margin-bottom: 12px;
+}
+
+.inventory-calendar .rbc-month-view,
+.inventory-calendar .rbc-time-view,
+.inventory-calendar .rbc-agenda-view {
+  border-color: #d8dee9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.inventory-calendar .rbc-header {
+  min-height: 42px;
+  padding: 10px 6px;
+  border-color: #e5e7eb;
+  color: #4b5563;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.inventory-calendar .rbc-month-row,
+.inventory-calendar .rbc-day-bg,
+.inventory-calendar .rbc-time-content,
+.inventory-calendar .rbc-timeslot-group,
+.inventory-calendar .rbc-agenda-table,
+.inventory-calendar .rbc-agenda-table tbody > tr > td,
+.inventory-calendar .rbc-agenda-table thead > tr > th {
+  border-color: #e5e7eb;
+}
+
+.inventory-calendar .rbc-off-range-bg {
+  background: #f8fafc;
+}
+
+.inventory-calendar .rbc-today {
+  background: #eff6ff;
+}
+
+.inventory-calendar .rbc-date-cell {
+  padding: 6px 8px 2px;
+  color: #4b5563;
+  font-size: 0.82rem;
+}
+
+.inventory-calendar .rbc-now .rbc-button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  min-height: 26px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.inventory-calendar .rbc-event,
+.inventory-calendar .rbc-day-slot .rbc-background-event {
+  border: 0;
+  border-radius: 6px;
+  padding: 3px 6px;
+  background: #64748b;
+  color: #ffffff;
+}
+
+.inventory-calendar .rbc-event:focus {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+.inventory-calendar .rbc-event.status-pending {
+  background: #64748b;
+}
+
+.inventory-calendar .rbc-event.status-working {
+  background: #2563eb;
+}
+
+.inventory-calendar .rbc-event.status-completed {
+  background: #0f766e;
+}
+
+.inventory-calendar .rbc-event.priority-medium {
+  box-shadow: inset 4px 0 0 #f59e0b;
+}
+
+.inventory-calendar .rbc-event.priority-high {
+  box-shadow: inset 4px 0 0 #dc2626;
+}
+
+.inventory-calendar .calendar-event-label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.15;
+}
+
+.inventory-calendar .calendar-event-title,
+.inventory-calendar .calendar-event-customer {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inventory-calendar .calendar-event-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.inventory-calendar .calendar-event-customer {
+  opacity: 0.85;
+  font-size: 0.68rem;
+}
+
+.inventory-calendar .rbc-agenda-event-cell .calendar-event-label {
+  color: #111827;
+}
+
+@media (max-width: 700px) {
+  .inventory-calendar {
+    min-height: 620px;
+  }
+
+  .inventory-calendar .rbc-calendar {
+    min-width: 760px;
+  }
+
+  .inventory-calendar {
+    overflow-x: auto;
+  }
+}
