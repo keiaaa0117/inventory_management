@@ -18,7 +18,6 @@ import java.util.UUID;
 @RequestMapping("/api/orders")
 @RequiredArgsConstructor
 @Slf4j
-@CrossOrigin(origins = { "http://localhost:5173", "http://localhost:3000" })
 public class OrderController {
 
     private final OrderService orderService;
