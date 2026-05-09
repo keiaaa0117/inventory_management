@@ -15,7 +15,7 @@ services:
           name: inventory-management-db
           property: connectionString
       - key: APP_CORS_ALLOWED_ORIGINS
-        value: https://inventory-management-frontend.onrender.com
+        value: https://inventory-management-frontend-bncg.onrender.com
 
   - type: web
     name: inventory-management-frontend
