@@ -15,4 +15,4 @@ COPY --from=build /app/target/inventory-management-1.0.0.jar app.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "app.jar"]
+CMD ["sh", "-c", "if [ -n \"$DATABASE_URL\" ] && [ \"${DATABASE_URL#jdbc:}\" = \"$DATABASE_URL\" ]; then export DATABASE_URL=\"jdbc:$DATABASE_URL\"; fi; java -jar app.jar"]
