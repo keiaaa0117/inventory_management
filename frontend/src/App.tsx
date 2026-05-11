@@ -18,11 +18,13 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import TuneIcon from "@mui/icons-material/Tune";
 import { AlertsPage } from "./pages/AlertsPage";
 import { CalendarPage } from "./pages/CalendarPage";
 import { CreateOrderPage } from "./pages/CreateOrderPage";
 import { CustomersPage } from "./pages/CustomersPage";
 import { HomePage } from "./pages/HomePage";
+import { OrderFieldsPage } from "./pages/OrderFieldsPage";
 import { OrdersPage } from "./pages/OrdersPage";
 
 const theme = createTheme({
@@ -104,6 +106,9 @@ function App() {
               <NavButton to="/customers" icon={<PeopleAltIcon />}>
                 顧客マスタ
               </NavButton>
+              <NavButton to="/order-fields" icon={<TuneIcon />}>
+                納品項目設定
+              </NavButton>
               <NavButton to="/alerts" icon={<NotificationsActiveIcon />}>
                 納期アラート
               </NavButton>
@@ -120,6 +125,7 @@ function App() {
             <Route path="/orders" element={<OrdersPage />} />
             <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/customers" element={<CustomersPage />} />
+            <Route path="/order-fields" element={<OrderFieldsPage />} />
             <Route path="/alerts" element={<AlertsPage />} />
             <Route path="/orders/new" element={<CreateOrderPage />} />
           </Routes>

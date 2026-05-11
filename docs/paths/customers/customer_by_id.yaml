@@ -1,0 +1,54 @@
+get:
+  tags:
+    - Customer
+  summary: "顧客詳細取得"
+  description: "指定したIDの顧客詳細を取得します。"
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: "顧客ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "200":
+      description: "顧客詳細の取得に成功"
+    "404":
+      description: "指定した顧客が存在しない"
+put:
+  tags:
+    - Customer
+  summary: "顧客更新"
+  description: "指定したIDの顧客情報を更新します。"
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: "顧客ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "200":
+      description: "顧客の更新に成功"
+    "400":
+      description: "リクエスト内容が不正"
+delete:
+  tags:
+    - Customer
+  summary: "顧客削除"
+  description: "指定したIDの顧客を論理削除します。"
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: "顧客ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "204":
+      description: "顧客の削除に成功"
+    "404":
+      description: "指定した顧客が存在しない"

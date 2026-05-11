@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -27,6 +28,7 @@ public class OrderDTO {
     private Order.Status status;
     private LocalDate constructionDate;
     private LocalDate deliveryDate;
+    private List<OrderCustomFieldValueDTO> customFields;
     private Boolean deleted;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
@@ -46,6 +48,12 @@ public class OrderDTO {
                 .createdAt(order.getCreatedAt())
                 .updatedAt(order.getUpdatedAt())
                 .build();
+    }
+
+    public static OrderDTO fromEntity(Order order, List<OrderCustomFieldValueDTO> customFields) {
+        OrderDTO dto = fromEntity(order);
+        dto.setCustomFields(customFields);
+        return dto;
     }
 
 }

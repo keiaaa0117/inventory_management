@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: "inventory-management"
+  description: "在庫管理アプリケーション用のAPIです。"
+  version: "1.0"
+servers:
+  - url: "http://localhost:8080"
+    description: "ローカル環境"
+
+tags:
+  - name: Customer
+    description: "顧客管理"
+  - name: Order
+    description: "注文管理"
+  - name: OrderSearch
+    description: "注文検索"
+  - name: OrderAlert
+    description: "注文アラート"
+  - name: OrderField
+    description: "納品登録項目管理"
+
+paths:
+  # 顧客管理
+  /api/customers:
+    $ref: "./paths/customers/customers.yaml"
+  /api/customers/{id}:
+    $ref: "./paths/customers/customer_by_id.yaml"
+
+  # 注文管理
+  /api/orders:
+    $ref: "./paths/orders/orders.yaml"
+  /api/orders/{id}:
+    $ref: "./paths/orders/order_by_id.yaml"
+
+  # 注文検索
+  /api/orders/status/{status}:
+    $ref: "./paths/orders/orders_by_status.yaml"
+  /api/orders/customer/{customerId}:
+    $ref: "./paths/orders/orders_by_customer.yaml"
+  /api/orders/calendar:
+    $ref: "./paths/orders/orders_calendar.yaml"
+
+  # 注文アラート
+  /api/orders/alerts/upcoming:
+    $ref: "./paths/orders/upcoming_orders.yaml"
+
+  # 納品登録項目管理
+  /api/order-fields:
+    $ref: "./paths/orderFields/order_fields.yaml"
+  /api/order-fields/{id}:
+    $ref: "./paths/orderFields/order_field_by_id.yaml"

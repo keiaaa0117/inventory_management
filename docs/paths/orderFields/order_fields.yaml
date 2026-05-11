@@ -1,0 +1,18 @@
+get:
+  tags:
+    - OrderField
+  summary: "納品登録項目一覧取得"
+  description: "納品登録で使用する追加項目の一覧を取得します。"
+  responses:
+    "200":
+      description: "追加項目一覧の取得に成功"
+post:
+  tags:
+    - OrderField
+  summary: "納品登録項目作成"
+  description: "納品登録で使用する追加項目を作成します。"
+  responses:
+    "201":
+      description: "追加項目の作成に成功"
+    "400":
+      description: "リクエスト内容が不正"

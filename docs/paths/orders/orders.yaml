@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Order
+  summary: "注文一覧取得"
+  description: "削除されていない注文の一覧を取得します。"
+  responses:
+    "200":
+      description: "注文一覧の取得に成功"
+post:
+  tags:
+    - Order
+  summary: "注文作成"
+  description: "新しい注文を作成します。"
+  responses:
+    "201":
+      description: "注文の作成に成功"
+    "400":
+      description: "リクエスト内容が不正"

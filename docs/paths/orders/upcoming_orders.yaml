@@ -1,0 +1,17 @@
+get:
+  tags:
+    - OrderAlert
+  summary: "納期アラート注文取得"
+  description: "納期が近い注文一覧を取得します。対象は未着手または作業中の注文です。"
+  parameters:
+    - name: days
+      in: query
+      required: false
+      description: "何日後までの注文を対象にするか。未指定の場合は3日です。"
+      schema:
+        type: integer
+        default: 3
+        minimum: 0
+  responses:
+    "200":
+      description: "注文一覧の取得に成功"

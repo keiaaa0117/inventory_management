@@ -1,0 +1,25 @@
+get:
+  tags:
+    - OrderSearch
+  summary: "カレンダー用注文取得"
+  description: "納期の期間を指定して注文一覧を取得します。"
+  parameters:
+    - name: start
+      in: query
+      required: true
+      description: "開始日"
+      schema:
+        type: string
+        format: date
+      example: "2024-01-01"
+    - name: end
+      in: query
+      required: true
+      description: "終了日"
+      schema:
+        type: string
+        format: date
+      example: "2024-01-31"
+  responses:
+    "200":
+      description: "注文一覧の取得に成功"

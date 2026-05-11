@@ -1,0 +1,18 @@
+get:
+  tags:
+    - Customer
+  summary: "顧客一覧取得"
+  description: "削除されていない顧客の一覧を取得します。"
+  responses:
+    "200":
+      description: "顧客一覧の取得に成功"
+post:
+  tags:
+    - Customer
+  summary: "顧客作成"
+  description: "新しい顧客を作成します。"
+  responses:
+    "201":
+      description: "顧客の作成に成功"
+    "400":
+      description: "リクエスト内容が不正"

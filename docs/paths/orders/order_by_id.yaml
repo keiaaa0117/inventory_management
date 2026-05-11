@@ -1,0 +1,54 @@
+get:
+  tags:
+    - Order
+  summary: "注文詳細取得"
+  description: "指定したIDの注文詳細を取得します。"
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: "注文ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "200":
+      description: "注文詳細の取得に成功"
+    "404":
+      description: "指定した注文が存在しない"
+put:
+  tags:
+    - Order
+  summary: "注文更新"
+  description: "指定したIDの注文情報を更新します。"
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: "注文ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "200":
+      description: "注文の更新に成功"
+    "400":
+      description: "リクエスト内容が不正"
+delete:
+  tags:
+    - Order
+  summary: "注文削除"
+  description: "指定したIDの注文を論理削除します。"
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: "注文ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "204":
+      description: "注文の削除に成功"
+    "404":
+      description: "指定した注文が存在しない"

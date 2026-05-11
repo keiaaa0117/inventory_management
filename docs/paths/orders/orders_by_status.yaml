@@ -1,0 +1,21 @@
+get:
+  tags:
+    - OrderSearch
+  summary: "ステータス別注文取得"
+  description: "指定したステータスの注文一覧を取得します。"
+  parameters:
+    - name: status
+      in: path
+      required: true
+      description: "注文ステータス。PENDING、WORKING、COMPLETEDを指定できます。"
+      schema:
+        type: string
+        enum:
+          - PENDING
+          - WORKING
+          - COMPLETED
+  responses:
+    "200":
+      description: "注文一覧の取得に成功"
+    "400":
+      description: "指定したステータスが不正"

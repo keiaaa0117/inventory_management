@@ -1,0 +1,54 @@
+get:
+  tags:
+    - OrderField
+  summary: "納品登録項目詳細取得"
+  description: "指定したIDの追加項目を取得します。"
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: "追加項目ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "200":
+      description: "追加項目詳細の取得に成功"
+    "404":
+      description: "指定した追加項目が存在しない"
+put:
+  tags:
+    - OrderField
+  summary: "納品登録項目更新"
+  description: "指定したIDの追加項目を更新します。"
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: "追加項目ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "200":
+      description: "追加項目の更新に成功"
+    "400":
+      description: "リクエスト内容が不正"
+delete:
+  tags:
+    - OrderField
+  summary: "納品登録項目削除"
+  description: "指定したIDの追加項目を論理削除します。"
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: "追加項目ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "204":
+      description: "追加項目の削除に成功"
+    "404":
+      description: "指定した追加項目が存在しない"

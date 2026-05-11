@@ -1,0 +1,16 @@
+get:
+  tags:
+    - OrderSearch
+  summary: "顧客別注文取得"
+  description: "指定した顧客の注文一覧を取得します。"
+  parameters:
+    - name: customerId
+      in: path
+      required: true
+      description: "顧客ID"
+      schema:
+        type: string
+        format: uuid
+  responses:
+    "200":
+      description: "注文一覧の取得に成功"
