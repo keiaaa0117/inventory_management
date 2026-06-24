@@ -15,7 +15,7 @@ services:
           name: order-management-db
           property: connectionString
       - key: APP_CORS_ALLOWED_ORIGINS
-        value: https://order-management-frontend-bncg.onrender.com
+        value: https://order-management-frontend-npj5.onrender.com
 
   - type: web
     name: order-management-frontend
@@ -24,7 +24,7 @@ services:
     staticPublishPath: frontend/dist
     envVars:
       - key: VITE_API_BASE_URL
-        value: https://order-management-backend-dz8b.onrender.com
+        value: https://order-management-backend-8rk6.onrender.com
     routes:
       - type: rewrite
         source: /*
