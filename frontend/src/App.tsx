@@ -1,5 +1,10 @@
 import type { ReactNode } from "react";
-import { Link as RouterLink, Route, Routes, useLocation } from "react-router-dom";
+import {
+  Link as RouterLink,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import {
   AppBar,
   Box,
@@ -90,8 +95,12 @@ function App() {
       <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
         <AppBar position="static" elevation={0}>
           <Toolbar sx={{ gap: 2, flexWrap: "wrap", py: 1 }}>
-            <Typography component="div" variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
-              在庫管理システム
+            <Typography
+              component="div"
+              variant="h6"
+              sx={{ flexGrow: 1, fontWeight: 700 }}
+            >
+              受注管理システム
             </Typography>
             <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
               <NavButton to="/" icon={<DashboardIcon />}>
