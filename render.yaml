@@ -35,5 +35,5 @@ databases:
     plan: free
     region: singapore
     postgresMajorVersion: "16"
-    databaseName: inventory_db
-    user: inventory_user
+    databaseName: inventory_db_ew79
+    user: inventory_db_ew79_user
